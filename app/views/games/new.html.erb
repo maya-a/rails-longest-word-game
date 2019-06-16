@@ -1,0 +1,22 @@
+<h1 class = text-center>New game</h1>
+<ul class='d-flex justify-content-around'>
+  <% @letters.each do |letter| %>
+  <li class= "text-center "><%= letter %></li>
+  <% end %>
+
+
+</ul>
+<form action="/score">
+  <p class = "text-center">What's the longest word you can find?</p>
+<div class="d-flex justify-content-center">
+  <input class = 'form-control w-50' type="text" name="word" placeholder='Word here!'>
+  <input type="submit" value ='Play' class = "btn btn-success">
+</div>
+
+
+  <input id="letter_grid" name="letters" type="hidden" value = <%= @string%>/>
+  <input id="start" name="start_time" type="hidden" value = <%= @start_time %>/>
+
+
+</form>
+
